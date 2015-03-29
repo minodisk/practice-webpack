@@ -44,7 +44,48 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+	var module0 = __webpack_require__(1);
+	console.log(module0.foo);
+	console.log(module0.bar());
+
+	var module1 = __webpack_require__(2);
+	console.log(module1.foo);
+	console.log(module1.bar());
+
+	var module2 = __webpack_require__(3);
+	console.log(module2());
+
+
+/***/ },
+/* 1 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports.foo = 'module0.foo';
+	exports.bar = function () {
+	  return 'module0.bar';
+	};
+
+
+/***/ },
+/* 2 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {
+	  foo: 'module1.foo',
+	  bar: function () {
+	    return 'module1.bar';
+	  }
+	};
+
+
+/***/ },
+/* 3 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = function () {
+	  return 'module2';
+	};
+
 
 /***/ }
 /******/ ]);
