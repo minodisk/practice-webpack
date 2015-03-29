@@ -6,5 +6,7 @@ var module1 = require('./module1');
 console.log(module1.foo);
 console.log(module1.bar());
 
-var module2 = require('./module2');
-console.log(module2());
+var Module2 = require('./module2');
+module2 = new Module2();
+console.log(module2.foo);
+console.log(module2.bar());
